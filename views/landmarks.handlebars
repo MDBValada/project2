@@ -1,25 +1,37 @@
 <div id="myLandmarks">
-  <div class="container">
-   
-   
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h2>Saved Landmarks</h2>
- 
+  <div class="container-fluid header">
+    <h2>My Saved Landmarks</h2>
+  </div>
 
-   
-        <ul id="saved-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
+  <div class="container-fluid landmark-contain">
+    <div class="saved">
+      <img src="http://fakeimg.pl/300x300/000/?text=1">
+      <img src="http://fakeimg.pl/300x300/111/?text=2">
+      <img src="http://fakeimg.pl/300x300/222/?text=3">
+      <img src="http://fakeimg.pl/300x300/333/?text=4">
+      <img src="http://fakeimg.pl/300x300/444/?text=5">
+      <img src="http://fakeimg.pl/300x300/555/?text=6">
     </div>
   </div>
+
+
+
+
+
+
 </div>
+
+{{!-- example code --}}
+<ul id="saved-list" class="list-group">
+  {{#each examples}}
+  <li data-id="{{this.id}}" class="list-group-item">
+    <a href="example/{{this.id}}">{{this.text}}</a>
+    <button class="btn btn-danger float-right delete">ｘ</button>
+  </li>
+  {{/each}}
+</ul>
+
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
