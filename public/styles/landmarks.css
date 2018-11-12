@@ -1,0 +1,7 @@
+.saved {
+   display: flex;
+}
+
+.landmark {
+   flex: 1 1 auto;
+}
