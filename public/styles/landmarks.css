@@ -1,6 +1,6 @@
 html {
    box-sizing: border-box;
-   
+   height: 100%;
 }
 
 *, *:before, *:after {
@@ -8,20 +8,22 @@ html {
 }
 
 body {
-   background-color: rgb(202, 163, 163);
+   background-color: white;
+   min-height: 100%;
 }
 
 .header {
-   background-color: whitesmoke;
+   background-color: lightslategray;
    height: 100px;
    text-align: center;
    padding-top: 30px;
-   border-bottom: 2px solid rgb(59, 59, 59);
+   border-bottom: 3px solid rgb(59, 59, 59);
+   color: black;
 }
 
 .landmark-contain {
    max-width: 960px;
-   margin: 50px auto;
+   margin: 50px auto 100px auto;
 }
 
 .saved {
@@ -91,21 +93,13 @@ body {
    }
  }
 
- /* footer {
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    
- } */
-
  .footer {
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    padding-bottom: 15px;
+   text-align: center;
+   padding-bottom: 10px;
+   color: rgb(41, 41, 41);
  }
 
  .footer a {
-    color: #212529;
     text-decoration: none;
+    color: rgb(41, 41, 41);
  }
