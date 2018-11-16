@@ -27,6 +27,14 @@ module.exports = function (app) {
     });
   });
 
+  // Data Transfer Object. Parse specific fields into object.
+  class LocationObject {
+    constructor(name, image) {
+      this.name = name;
+      this.image = image;
+    }
+  };
+
   // TEST ROUTE
   app.get("/api/test/:query", function (req, res) {
     dpla({
@@ -36,7 +44,43 @@ module.exports = function (app) {
         'sort_by': 'isPartOf.name',
       }
     }, function (err, results) {
-      res.json(results)
+      let locationObjects = [];
+      results.docs.forEach(jsonObj => {
+        let name = jsonObj.sourceResource.title;
+        let image = jsonObj.object;
+        locationObjects.push(new LocationObject(name, image))
+      });
+      
+      res.json(locationObjects);
     });
   });
-};
+
+  app.get("/search/:query", function (req, res) {
+    dpla({
+      uri: '/items',
+      search: {
+        q: req.params.query,
+        'sort_by': 'isPartOf.name',
+      } 
+    },function (err, results) {
+      //callback function for the dpla cacallll
+      // create an array to store all of your data objects that we will be mining from the datat we got in
+      let locationObjects = [];
+      console.log(results.docs.length);
+      // loop throuhg the results and get out the name and the image
+      for (let i = 0; i < results.docs.length; i++) {
+        const jsonObj = results.docs[i];
+        let name = jsonObj.sourceResource.title;
+        let image = jsonObj.object;
+        // using the name and the image we got out of the results we create a new location object, and push it into the array of location objects
+        locationObjects.push(new LocationObject(name, image));
+        // if we are at the end of the list of results call the res.render function to throw the new data into our handlebars page
+        if(i == results.docs.length -1 ){
+          res.render("landmarks", { locationObjects: locationObjects });
+        }
+      }
+    });
+  });
+
+
+}
