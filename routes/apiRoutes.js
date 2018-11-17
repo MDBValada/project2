@@ -36,30 +36,30 @@ module.exports = function (app) {
   };
 
   // TEST ROUTE
-  app.get("/api/test/:query", function (req, res) {
-    dpla({
-      uri: '/items',
-      search: {
-        q: req.params.query,
-        'sort_by': 'isPartOf.name',
-      }
-    }, function (err, results) {
-      let locationObjects = [];
-      results.docs.forEach(jsonObj => {
-        let name = jsonObj.sourceResource.title;
-        let image = jsonObj.object;
-        locationObjects.push(new LocationObject(name, image))
-      });
+  // app.get("/api/test/:query", function (req, res) {
+  //   dpla({
+  //     uri: '/items',
+  //     search: {
+  //       q: req.params.query,
+  //       'sort_by': 'isPartOf.name',
+  //     }
+  //   }, function (err, results) {
+  //     let locationObjects = [];
+  //     results.docs.forEach(jsonObj => {
+  //       let name = jsonObj.sourceResource.title;
+  //       let image = jsonObj.object;
+  //       locationObjects.push(new LocationObject(name, image))
+  //     });
       
-      res.json(locationObjects);
-    });
-  });
+  //     res.json(locationObjects);
+  //   });
+  // });
 
   app.get("/search/:query", function (req, res) {
     dpla({
       uri: '/items',
       search: {
-        q: req.params.query,
+        q: req.params.query, 
         'sort_by': 'isPartOf.name',
       } 
     },function (err, results) {
@@ -76,7 +76,8 @@ module.exports = function (app) {
         locationObjects.push(new LocationObject(name, image));
         // if we are at the end of the list of results call the res.render function to throw the new data into our handlebars page
         if(i == results.docs.length -1 ){
-          res.render("landmarks", { locationObjects: locationObjects });
+          res.render("landmarks", { title: 'My Landmarks',
+          style: 'landmarks.css', locationObjects: locationObjects });
         }
       }
     });

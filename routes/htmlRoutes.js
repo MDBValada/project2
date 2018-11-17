@@ -13,7 +13,7 @@ module.exports = function (app) {
   });
 
   // Load saved-landmarks page
-  app.get("/saved", function (req, res) {
+  app.get("/search/:query", function (req, res) {
     res.render("landmarks", {
       title: 'My Landmarks',
       style: 'landmarks.css',

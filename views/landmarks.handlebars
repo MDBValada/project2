@@ -5,17 +5,13 @@
 
   <div class="container-fluid landmark-contain">
     <div class="saved">
-      {{!-- <img src="http://fakeimg.pl/300x300/000/?text=1">
-      <img src="http://fakeimg.pl/300x300/111/?text=2">
-      <img src="http://fakeimg.pl/300x300/222/?text=3">
-      <img src="http://fakeimg.pl/300x300/333/?text=4">
-      <img src="http://fakeimg.pl/300x300/444/?text=5">
-      <img src="http://fakeimg.pl/300x300/555/?text=6"> --}}
+      <ul>
 
-      {{#each locationObjects}}
-        {{name}} {{image}} 
-      {{/each}}
-
+        {{#each locationObjects}}
+          <img src="{{this.image}}">
+        {{/each}}
+        
+      </ul>
     </div>
   </div>
 
