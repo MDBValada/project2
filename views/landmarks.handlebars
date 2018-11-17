@@ -8,29 +8,19 @@
       <ul>
 
         {{#each locationObjects}}
-          <img src="{{this.image}}">
+        <img src="{{this.image}}">
         {{/each}}
-        
+
       </ul>
     </div>
   </div>
-
-
-
-
-
-
 </div>
 
-{{!-- example code --}}
-<ul id="saved-list" class="list-group">
-  {{#each examples}}
-  <li data-id="{{this.id}}" class="list-group-item">
-    <a href="example/{{this.id}}">{{this.text}}</a>
-    <button class="btn btn-danger float-right delete">ｘ</button>
-  </li>
-  {{/each}}
-</ul>
+<div class="container-fluid footer">
+  <footer>© 2018 ||
+    <a class="repo" href="https://github.com/savannahcarr/project2.git">Reference Work</a>
+  </footer>
+</div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
