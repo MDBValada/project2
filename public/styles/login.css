@@ -1,9 +1,28 @@
-body{
-   background: gray;
-   background-size: cover;
-   background-position: center;
- }
- 
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+}
+
+.header {
+  background-color: lightslategray;
+  height: 100px;
+  text-align: center;
+  padding-top: 30px;
+  border-bottom: 3px solid rgb(59, 59, 59);
+  color: black;
+}
+
  .login-box{
    max-width: 700px;
    float: none;
