@@ -1,0 +1,39 @@
+<div id="container">
+   <div class="container-fluid header">
+      <h2>Search Landmarks</h2>
+   </div>
+
+   {{!-- Search Input --}}
+   <div class="container-fluid search">
+      <div class="row">
+         <form>
+            <div class="form-group mx-auto">
+               <label for="searchBar">Which location's past would you like to examine?</label>
+               <input type="text" class="form-control" id="searchBar" placeholder="Enter a city, state, or specific location here">
+               {{!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+               --}}
+            </div>
+            <button type="submit" id="submitInput" class="btn btn-primary">Submit</button>
+         </form>
+      </div>
+   </div>
+
+   {{!-- Render search input landmarks --}}
+   <div class="container-fluid result-imgs">
+      <ul>
+
+         {{#each locationObjects}}
+
+         <div class="card text-white">
+            <img class="card-img" src="{{this.image}}" alt="Card image">
+            <div class="card-img-overlay">
+               <h5 class="card-title"> {{this.name}} </h5>
+               <button id="favorites"><i class="fas fa-star"></i></button>
+            </div>
+         </div>
+
+         {{/each}}
+
+      </ul>
+   </div>
+</div>

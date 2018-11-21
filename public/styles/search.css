@@ -1,0 +1,63 @@
+html {
+   box-sizing: border-box;
+   height: 100%;
+}
+
+body {
+   position: relative;
+   margin: 0;
+   padding-bottom: 6rem;
+   min-height: 100%;
+}
+
+.header {
+   background-color: lightslategray;
+   height: 100px;
+   text-align: center;
+   padding-top: 30px;
+   border-bottom: 3px solid rgb(59, 59, 59);
+   color: black;
+}
+
+/* Search bar */
+.search {
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   margin: 4rem 0;
+}
+
+.result-imgs {
+   margin: 0 9em;
+}
+
+.card {
+   float: left;
+   width: 35%;
+   margin: 20px;
+}
+
+button#favorites {
+   position: absolute;
+   top: 45%;
+   left: 40%;
+   width: 20%;
+   background-color: transparent;
+   border: none;
+}
+
+.fa-star {
+   font-size: 3em;
+   color: yellow;
+}
+
+.card-img-overlay {
+   opacity: 0;
+   transition: .5s ease;
+}
+
+.card-img-overlay:hover {
+   opacity: 1;
+   background-color: rgba(95, 95, 95, .5)
+}
+
