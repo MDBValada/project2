@@ -33,16 +33,12 @@ body {
 
 button#favorites {
   position: absolute;
-  top: 45%;
-  left: 40%;
+  top: 4%;
+  right: 6%;
   width: 20%;
   background-color: transparent;
   border: none;
-}
-
-.fa-star {
-  font-size: 3em;
-  color: yellow;
+  outline: none;
 }
 
 .card-img-overlay {
@@ -53,6 +49,37 @@ button#favorites {
 .card-img-overlay:hover {
   opacity: 1;
   background-color: rgba(95, 95, 95, 0.5);
+}
+
+@keyframes fa-star-hover {
+  from {
+    font-size: 3.2em;
+  }
+  80% {
+    font-size: 3em;
+  }
+}
+
+.fa-star {
+  display: block;
+  font-size: 3em;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.2s ease;
+  color: #cbcdce;
+  margin: 0;
+}
+
+.fa-star.active {
+  color: #dc3232;
+}
+.fa-star:hover {
+  animation: fa-star-hover 0.3s infinite alternate;
+}
+.fa-star.is_animating {
+  animation: fa-star-anime 0.3s;
 }
 
 /* =============================================================== */
