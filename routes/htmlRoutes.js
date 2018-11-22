@@ -25,8 +25,15 @@ module.exports = function (app) {
     });
   });
 
+  // Load search page with location request
+  app.get("/favorites", function (req, res) {
+    res.render("landmarks", {
+      title: 'Saved Landmarks',
+      style: 'landmarks.css',
+    });
+  });
 
- 
+
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {

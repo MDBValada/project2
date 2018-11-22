@@ -8,9 +8,24 @@ $("#submitInput").on("click", function (event) {
    window.location.replace(baseURL + "/search/" + locationInput);
 });
 
+
+// ================= Favorite functionality ==================
 // Favorites button hook
 $(".fa-star").click(function() {
-   $(this).toggleClass('active');
+   $(this).toggleClass("active");
+
+   var parentCard = $(this).attr("data-parent");
+   var parentCardID = "#" + parentCard;
+
+   if (favStatus) {
+      $(this).class("active");
+     
+      var newCard = $("<div>");
+      $(newCard).append($(parentCardID).html());
+      $(".saved").append(newCard);
+
+   }
+
 });
 
 /* When a user clicks, toggle the 'is-animating' class */
@@ -22,3 +37,4 @@ $(".fa-star").on('click touchstart', function() {
 $(".fa-star").on('animationend', function(){
    $(this).toggleClass('is_animating');
  });
+
