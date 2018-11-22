@@ -5,35 +5,34 @@
 
    {{!-- Search Input --}}
    <div class="container-fluid search">
-      <div class="row">
-         <form>
-            <div class="form-group mx-auto">
-               <label for="searchBar">Which location's past would you like to examine?</label>
-               <input type="text" class="form-control" id="searchBar" placeholder="Enter a city, state, or specific location here">
-               {{!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-               --}}
-            </div>
-            <button type="submit" id="submitInput" class="btn btn-primary">Submit</button>
-         </form>
-      </div>
+      <form>
+         <div class="form-group">
+            <label for="searchBar">Which location's past would you like to examine?</label>
+            <input type="text" class="form-control" id="searchBar" placeholder="Enter a city, state, or specific location here">
+            {{!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            --}}
+         </div>
+         <button type="submit" id="submitInput" class="btn btn-primary">Submit</button>
+      </form>
    </div>
 
    {{!-- Render search input landmarks --}}
-   <div class="container-fluid result-imgs">
-      <ul>
+   <div class="container result-imgs mb-5">
+      <div class="card-columns">
 
-         {{#each locationObjects}}
-
-         <div class="card text-white">
-            <img class="card-img" src="{{this.image}}" alt="Card image">
+      {{#each locationObjects}}
+         <div class="card bg-light border-secondary" style="width: 18rem">
+            <img class="card-img-top" src="{{this.image}}">
             <div class="card-img-overlay">
-               <h5 class="card-title"> {{this.name}} </h5>
                <button id="favorites"><i class="fas fa-star"></i></button>
             </div>
+            <div class="card-body">
+               <h6 class="card-title mb-0"> {{this.name}} </h6>
+            </div>
          </div>
+      {{/each}}
+      </div>
 
-         {{/each}}
-
-      </ul>
    </div>
+   <div class="space"></div>
 </div>
