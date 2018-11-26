@@ -1,23 +1,19 @@
-{{!-- 
-<div class="container-fluid footer">
-  <footer>© 2018 ||
-    <a class="repo" href="https://github.com/savannahcarr/project2.git">Reference Work</a>
-  </footer>
-</div>  --}}
-
-
 <div class="signup__container">
   <div class="container__child signup__thumbnail">
     <div class="thumbnail__logo">
       <div class="logo__shape" width="25px"><i class="fas fa-globe-americas"></i>
-        <span><h1 class="logo__text">Now&Then</h1></span>
+        <span>
+          <h1 class="logo__text">Now&Then</h1>
+        </span>
       </div>
     </div>
     <div class="signup__overlay"></div>
   </div>
+
+  {{!-- SIGNUP FORM --}}
   <div class="container__child signup__form">
     <form action="#">
-      <div class="text text-center">Welcome to your very own time portal.</div>
+      <div class="text text-center">Welcome to your very own time portal</div>
       <div class="form-group">
         <label for="username">Username</label>
         <input class="form-control" type="text" name="username" id="username">
@@ -40,10 +36,36 @@
             <input class="btn btn--form" type="submit" value="Register" />
           </li>
           <li id="signup-link">
-            <a class="signup__link" href="#">I am already a member</a>
+            <a class="signin__link" href="#" id="show_signin">I am already a member</a>
           </li>
         </ul>
       </div>
     </form>
   </div>
+
+  {{!-- SIGNIN FORM --}}
+  <div class="container__child signin__form">
+    <form action="#">
+      <div class="text text-center">Welcome back!</div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input class="form-control" type="text" name="username" id="username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control" type="password" name="password" id="password" placeholder="********">
+      </div>
+      <div class="m-t-lg">
+        <ul class="list-inline">
+          <li id="submit-btn">
+            <input class="btn btn--form" type="submit" value="Login" />
+          </li>
+          <li id="signup-link">
+            <a class="signup__link" href="#" id="show_signup">Help, I am not a member</a>
+          </li>
+        </ul>
+      </div>
+    </form>
+  </div>
+
 </div>
