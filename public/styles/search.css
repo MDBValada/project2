@@ -1,0 +1,118 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+}
+
+.header {
+  background-color: lightslategray;
+  height: 100px;
+  text-align: center;
+  padding-top: 30px;
+  border-bottom: 3px solid rgb(59, 59, 59);
+  color: black;
+}
+
+/* Search bar */
+.search {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.card-columns .card .card-body {
+  display: inline-block;
+  height: 100%;
+}
+
+button#favorites {
+  position: absolute;
+  top: 4%;
+  right: 6%;
+  width: 20%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.card-img-overlay {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.card-img-overlay:hover {
+  opacity: 1;
+  background-color: rgba(95, 95, 95, 0.5);
+}
+
+@keyframes fa-star-hover {
+  from {
+    font-size: 3.2em;
+  }
+  80% {
+    font-size: 3em;
+  }
+}
+
+.fa-star {
+  display: block;
+  font-size: 3em;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.2s ease;
+  color: #cbcdce;
+  margin: 0;
+}
+
+.fa-star.active {
+  color: #dc3232;
+}
+.fa-star:hover {
+  animation: fa-star-hover 0.3s infinite alternate;
+}
+.fa-star.is_animating {
+  animation: fa-star-anime 0.3s;
+}
+
+/* =============================================================== */
+/* Media queries for card columns */
+/* =============================================================== */
+
+/* iPhone 6/7/8 */
+@media only screen and (max-width: 414px) {
+  .card-columns {
+    column-count: 1;
+  }
+  .card {
+    margin-left: 3em;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .card-columns {
+    column-count: 1;
+    margin: auto;
+  }
+  .card {
+    margin-left: 7em;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .card-columns {
+    column-count: 2;
+  }
+  .card {
+    margin-left: 1.5em;
+  }
+}
