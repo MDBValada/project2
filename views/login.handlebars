@@ -1,45 +1,49 @@
-<div id="container">
-   <div class="container-fluid header">
-      <h2>Landmark Throwback Generator??</h2>
-   </div>
-
-   <div class="container-fluid">
-      <div class="login-box">
-         <div class="row">
-            <div class="col-md-6 login-left">
-               <h2> Login Here </h2>
-               <form action="validation.php" method="post">
-                  <div class="form-group">
-                     <label>username</label>
-                     <input type="text" name="user" class="form-control" required>
-                  </div>
-                  <div class="form-group">
-                     <label>Password</label>
-                     <input type="password" name="password" class="form-control" required>
-                  </div>
-                  <button type="submit" class="btn btn-primary"> Login</button>
-               </form>
-            </div>
-            <div class="col-md-6 login-right">
-               <h2> Register Here </h2>
-               <form action="registration.php" method="post">
-                  <div class="form-group">
-                     <label>username</label>
-                     <input type="text" name="user" class="form-control" required>
-                  </div>
-                  <div class="form-group">
-                     <label>Password</label>
-                     <input type="password" name="password" class="form-control" required>
-                  </div>
-                  <button type="submit" class="btn btn-primary"> Login</button>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-
+{{!-- 
 <div class="container-fluid footer">
-   <footer>© 2018 ||
-      <a class="repo" href="https://github.com/savannahcarr/project2.git">Reference Work</a>
-   </footer>
+  <footer>© 2018 ||
+    <a class="repo" href="https://github.com/savannahcarr/project2.git">Reference Work</a>
+  </footer>
+</div>  --}}
+
+
+<div class="signup__container">
+  <div class="container__child signup__thumbnail">
+    <div class="thumbnail__logo">
+      <div class="logo__shape" width="25px"><i class="fas fa-globe-americas"></i>
+        <span><h1 class="logo__text">Now&Then</h1></span>
+      </div>
+    </div>
+    <div class="signup__overlay"></div>
+  </div>
+  <div class="container__child signup__form">
+    <form action="#">
+      <div class="text text-center">Welcome to your very own time portal.</div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input class="form-control" type="text" name="username" id="username">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" type="text" name="email" id="email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control" type="password" name="password" id="password" placeholder="********">
+      </div>
+      <div class="form-group">
+        <label for="passwordRepeat">Repeat Password</label>
+        <input class="form-control" type="password" name="passwordRepeat" id="passwordRepeat" placeholder="********">
+      </div>
+      <div class="m-t-lg">
+        <ul class="list-inline">
+          <li id="submit-btn">
+            <input class="btn btn--form" type="submit" value="Register" />
+          </li>
+          <li id="signup-link">
+            <a class="signup__link" href="#">I am already a member</a>
+          </li>
+        </ul>
+      </div>
+    </form>
+  </div>
 </div>
