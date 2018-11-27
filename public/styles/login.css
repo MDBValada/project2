@@ -148,3 +148,9 @@ li#signup-link {
 .signup__link:hover {
   color: darken(#999, 13%);
 }
+
+#message {
+  display: none;
+  color: red;
+  font-size: .9rem;
+}

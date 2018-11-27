@@ -4,12 +4,12 @@ var dpla = require('dpla')('291cf4b916773e5304769e458b383d8f')
 
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
-  // If the user has valid login credentials, send to the members page, otherwise send user an error.
+  // If the user has valid login credentials, send to the search landmarks page, otherwise send user an error.
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
-    res.json("/members");
+    res.json("/search");
   });
 
-  
+
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
@@ -26,6 +26,28 @@ module.exports = function (app) {
       // res.status(422).json(err.errors[0].message);
     });
   });
+
+  // Route for logging user out
+  app.get("/logout", function(req, res) {
+    req.logout();
+    res.redirect("/");
+  });
+
+  // Route for getting some data about our user to be used client side
+  app.get("/api/user_data", function (req, res) {
+    if (!req.user) {
+      // The user is not logged in, send back an empty object
+      res.json({});
+    } else {
+      // Otherwise send back the user's email and id
+      // Sending back a password, even a hashed password, isn't a good idea
+      res.json({
+        email: req.user.email,
+        id: req.user.id
+      });
+    }
+  });
+
 
 
   // Data Transfer Object. Parse specific fields into object.
