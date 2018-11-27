@@ -25,7 +25,7 @@ module.exports = function (app) {
     res.redirect("/");
   });
 
-  
+
   // Load initial search page
   app.get("/search", function (req, res) {
     res.render("search", {
@@ -49,8 +49,6 @@ module.exports = function (app) {
       style: 'landmarks.css',
     });
   });
-
-
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {

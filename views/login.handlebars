@@ -10,59 +10,82 @@
     <div class="signup__overlay"></div>
   </div>
 
-  {{!-- SIGNUP FORM --}}
-  <div class="container__child signup__form">
-    <form class="signup" action="#">
-      <div class="text text-center">Welcome to your very own time portal</div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input class="form-control" type="text" name="email" id="new_user_email">
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input class="form-control" type="password" name="password" id="new_user_password" placeholder="********">
-      </div>
-      <div class="m-t-lg">
-        <ul class="list-inline">
-          <li id="submit-btn">
-            <input class="btn btn--form" type="submit" value="Register" />
-          </li>
-          <li id="signup-link">
-            <a class="signin__link" href="#" id="show_signin">I am already a member</a>
-          </li>
-        </ul>
-      </div>
-    </form>
-  </div>
-
   {{!-- SIGNIN FORM --}}
   <div class="container__child signin__form">
-    <form class="signin" action="#">
-      <div class="text text-center">Welcome back!</div>
+    <form class="signin text-center" action="#">
+      <div class="text text-center">Member Login</div>
       <div class="form-group">
-        <label for="email">Email</label>
-        <input class="form-control" type="text" name="email" id="member_email">
+        <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+          <input class="form-control" type="text" name="email" id="member_email" placeholder="Email">
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="form-group">
+          <div class="wrap-input100 validate-input" data-validate="Password is required">
+            <input class="form-control" type="password" name="password" id="member_password" placeholder="Password">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-lock" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="m-t-lg">
+            <ul class="list-inline">
+              <li id="submit-btn">
+                <input class="btn btn--form" type="submit" value="Login" />
+              </li>
+              <li id="signup-link">
+                <a class="signup__link" href="#" id="show_signup">Create your Account</a>
+              </li>
+            </ul>
+          </div>
+          <div id="no_input_msg2">
+            <h3>Input fields cannot be blank</h3>
+          </div>
+          <div id="message">
+            <h3>Invalid password</h3>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input class="form-control" type="password" name="password" id="member_password" placeholder="********">
-      </div>
-      <div class="m-t-lg">
-        <ul class="list-inline">
-          <li id="submit-btn">
-            <input class="btn btn--form" type="submit" value="Login" />
-          </li>
-          <li id="signup-link">
-            <a class="signup__link" href="#" id="show_signup">Help, I am not a member</a>
-          </li>
-        </ul>
-      </div>
-
-       <div id="message">
-        <h3>Invalid password</h3>
-      </div>
-
     </form>
   </div>
 
+  {{!-- SIGNUP FORM --}}
+  <div class="container__child signup__form">
+    <form class="signup text-center" action="#">
+      <div class="text text-center">Create Account</div>
+      <div class="form-group">
+        <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+          <input class="form-control" type="text" name="email" id="new_user_email" placeholder="Email">
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="form-group">
+          <div class="wrap-input100 validate-input" data-validate="Password is required">
+            <input class="form-control" type="password" name="password" id="new_user_password" placeholder="Password">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-lock" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="m-t-lg">
+            <ul class="list-inline">
+              <li id="submit-btn">
+                <input class="btn btn--form" type="submit" value="Register" />
+              </li>
+              <li id="signup-link">
+                <a class="signin__link" href="#" id="show_signin">I am already a member</a>
+              </li>
+            </ul>
+          </div>
+          <div id="no_input_msg">
+            <h3>Input fields cannot be blank</h3>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
