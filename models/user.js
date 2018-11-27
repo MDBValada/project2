@@ -4,6 +4,7 @@ var bcrypt = require("bcrypt-nodejs");
 // Creating User model
 module.exports = function (sequelize, DataTypes) {
    var User = sequelize.define("User", {
+      // Attributes
       email: {
          type: DataTypes.STRING,
          allowNull: false,
@@ -29,5 +30,11 @@ module.exports = function (sequelize, DataTypes) {
    User.hook("beforeCreate", function (user) {
       user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
    });
+
+   User.associate = function(models) {
+      // Associating Users with Favorited landmarks
+      User.hasMany(models.Favorite)
+   };
+   
    return User;
 };
