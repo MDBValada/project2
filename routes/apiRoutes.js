@@ -4,7 +4,7 @@ var dpla = require('dpla')('291cf4b916773e5304769e458b383d8f')
 
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
-  // If the user has valid login credentials, send to the search landmarks page, otherwise send user an error.
+  // If the user has valid login credentials, send to the search.handlebars view, otherwise send user an error.
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
     res.json("/search");
   });
@@ -68,7 +68,7 @@ module.exports = function (app) {
         // Using the name and image from the for-loop results, 
         // create a new location object and push it into the array of location objects.
         locationObjects.push(new LocationObject(name, image));
-        // At the end of the list of results, call res.render function to send the new data into the search.handlebars page.
+        // At the end of the list of results, call res.render function to send the new data into the search.handlebars view.
         if (i == results.docs.length - 1) {
           res.render("search", {
             title: 'Search Landmarks',
@@ -80,21 +80,23 @@ module.exports = function (app) {
     });
   });
 
-  // Route for sending user favorites to landmarks.handlebars page.
-  app.get("/favorites", function (req, res) {
-    var favs = {};
-    if (req.favs.user_id) {
-      favs.UserId = req.favs.user_id;
-    }
-    db.Favorite.findAll({
-      where: favs
-    }).then(function(dbFavorites) {
-      res.json(dbFavorites)
-    })
-  });
+  // Route for sending user favorites from the search.handlebars to landmarks.handlebars page.
+  // app.get("/search", function (req, res) {
+  //   db.Favorite.scope('defaultScope').findAll();
 
 
-  // Route for logging user out
+  //   if (req.favs.user_id) {
+  //     favs.UserId = req.favs.user_id;
+  //   }
+  //   db.Favorite.findAll({
+  //     where: favs
+  //   }).then(function(dbFavorites) {
+  //     res.json(dbFavorites)
+  //   })
+  // });
+
+
+  // Route for logging user out. Redirects back to login/signup view.
   app.get("/logout", function (req, res) {
     req.logout();
     res.redirect("/");

@@ -31,10 +31,10 @@ module.exports = function (sequelize, DataTypes) {
       user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
    });
 
-   User.associate = function(models) {
-      // Associating Users with Favorited landmarks
-      User.hasMany(models.Favorite)
-   };
-   
+   // User.associate = function(models) {
+   //    // Associating Users with Favorited landmarks
+   //    User.hasMany(models.Favorite)
+   // };
+
    return User;
 };

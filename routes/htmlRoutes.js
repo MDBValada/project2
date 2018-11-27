@@ -1,14 +1,10 @@
-var path = require("path");
-
-// Require middleware 
+// Require authentication middleware.
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
-var db = require("../models");
-
 module.exports = function (app) {
-  // Load login/signup page
+  // Load login/signup view.
   app.get("/", function (req, res) {
-     // If the user already has an account send them to the members search page
+     // If user already has an account, send them to the search.handlebars view.
      if (req.user) {
       res.redirect("/search");
     }
@@ -18,15 +14,14 @@ module.exports = function (app) {
     });
   });
 
-  // Here we've add our isAuthenticated middleware to this route.
-  // If a user who is not logged in tries to access this route they will be 
-  //redirected to the signup page
+  // isAuthenticated middleware implemented for this route.
+  // If a user who is not logged in tries to access this route 
+  // they will be redirected to the login/signup view.
   app.get("/login", isAuthenticated, function (req, res) {
     res.redirect("/");
   });
 
-
-  // Load initial search page
+  // Load search.handlebars view.
   app.get("/search", function (req, res) {
     res.render("search", {
       title: 'Search Landmarks',
@@ -34,7 +29,7 @@ module.exports = function (app) {
     });
   });
 
-  // Load search page with location request
+  // Load search.handlebars view and allow query request.
   app.get("/search/:query", function (req, res) {
     res.render("search", {
       title: 'Search Landmarks',
@@ -42,7 +37,7 @@ module.exports = function (app) {
     });
   });
 
-  // Load search page with location request
+  // Load favorites.handlebars view with user favorites.
   app.get("/favorites", function (req, res) {
     res.render("landmarks", {
       title: 'Saved Landmarks',
@@ -50,7 +45,7 @@ module.exports = function (app) {
     });
   });
 
-  // Render 404 page for any unmatched routes
+  // Render 404 page for any unmatched routes.
   app.get("*", function (req, res) {
     res.render("404");
   });

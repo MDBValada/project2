@@ -33,26 +33,26 @@ $(document).ready(function () {
 
 
 
-   $(document.body).on("click", ".fa-star", function () {
-      var favStatus = $(this).attr("favorite-status");
-      var parentCard = $(this).attr("data-parent");
-      var parentCardID = "#" + parentCard;
-      console.log(parentCardID);
+   // $(document.body).on("click", ".fa-star", function () {
+   //    var favStatus = $(this).attr("favorite-status");
+   //    var parentCard = $(this).attr("data-parent");
+   //    var parentCardID = "#" + parentCard;
+   //    console.log(parentCardID);
 
-      // Add to Favorites section
-      if (favStatus === "No") {
-         $(this).addClass("far").removeClass("fas");
-         $(this).attr({'favorite-status': 'Yes'});
-         var newFavCard = $("<div>", {id: "fav" + parentCard, class: "favorites"});
-         $(newFavCard).append($(parentCardID).html());
-         $(".saved").append(newFavCard);
-      } else {
-         // Remove from Favorites
-         $("[data-parent="+parentCard+"]").attr({'favorite-status': 'No'}).addClass("fas").removeClass("far");
-         var removeFav = $("#fav" + parentCard);
-         $(removeFav).remove();
-      }
-   });
+   //    // Add to Favorites section
+   //    if (favStatus === "No") {
+   //       $(this).addClass("far").removeClass("fas");
+   //       $(this).attr({'favorite-status': 'Yes'});
+   //       var newFavCard = $("<div>", {id: "fav" + parentCard, class: "favorites"});
+   //       $(newFavCard).append($(parentCardID).html());
+   //       $(".saved").append(newFavCard);
+   //    } else {
+   //       // Remove from Favorites
+   //       $("[data-parent="+parentCard+"]").attr({'favorite-status': 'No'}).addClass("fas").removeClass("far");
+   //       var removeFav = $("#fav" + parentCard);
+   //       $(removeFav).remove();
+   //    }
+   // });
 
 
 
