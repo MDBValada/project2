@@ -1,6 +1,6 @@
 body {
   font: 100% / 1.414 "Roboto", arial, sans-serif;
-  background: #e9e9e9;
+  background: #e0e8f3;
 }
 
 a,
@@ -20,9 +20,9 @@ a,
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50rem;
-  height: 32rem;
-  border-radius: 2px;
+  width: 60rem; 
+  height: 38rem;
+  border-radius: 15px;
   box-shadow: 4px 8px 12px rgba(0,0,0,.25);
 }
 
@@ -74,13 +74,13 @@ a,
 .text {
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
   text-transform: uppercase;
   color: #2a322b;
 }
 
 .signup__form {
-  padding: 1.7rem 2.5rem 2rem 2.5rem;
+  padding: 2.5rem;
   background: #fafafa;
 }
 
