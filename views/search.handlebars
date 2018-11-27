@@ -1,10 +1,8 @@
 <div id="container">
    <div class="container-fluid header">
-      <h2>Search Landmarks</h2>
+      <h2>Search Landmarks</h2><span><a class="saved" href="/favorites">Go to Saved</a></span>
       <p>Welcome <span class="member-name"></span></p>
-      <span><a class="logout" href="/logout">
-        Logout
-      </a></span>
+      <p><a class="logout" href="/logout">Logout</a></p>
    </div>
 
    {{!-- Search Input --}}
@@ -13,8 +11,6 @@
          <div class="form-group">
             <label for="searchBar">Which location's past would you like to examine?</label>
             <input type="text" class="form-control" id="searchBar" placeholder="Enter a city, state, or specific location here">
-            {{!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            --}}
          </div>
          <button type="submit" id="submitInput" class="btn btn-primary">Submit</button>
       </form>

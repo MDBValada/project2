@@ -4,17 +4,22 @@ html {
 }
 
 body {
+  font: 100% / 1.414 "Roboto", arial, sans-serif;
   position: relative;
-  margin: 0;
   min-height: 100%;
+  margin: 0;
+  background: #e0e8f3;
 }
 
 .header {
-  background-color: lightslategray;
   height: 100px;
   text-align: center;
   padding-top: 30px;
-  border-bottom: 3px solid rgb(59, 59, 59);
+  color: black;
+}
+
+a.saved {
+  font-size: 18px;
   color: black;
 }
 
@@ -31,7 +36,7 @@ body {
   height: 100%;
 }
 
-button#favorites {
+#favorites {
   position: absolute;
   top: 4%;
   right: 6%;
@@ -55,10 +60,12 @@ button#favorites {
   from {
     font-size: 3.2em;
   }
+
   80% {
     font-size: 3em;
   }
 }
+
 
 .fa-star {
   display: block;
@@ -67,6 +74,8 @@ button#favorites {
   height: auto;
   cursor: pointer;
   box-shadow: none;
+  border: none;
+  outline: none;
   transition: all 0.2s ease;
   color: #cbcdce;
   margin: 0;
@@ -75,9 +84,11 @@ button#favorites {
 .fa-star.active {
   color: #dc3232;
 }
+
 .fa-star:hover {
   animation: fa-star-hover 0.3s infinite alternate;
 }
+
 .fa-star.is_animating {
   animation: fa-star-anime 0.3s;
 }
@@ -91,6 +102,7 @@ button#favorites {
   .card-columns {
     column-count: 1;
   }
+
   .card {
     margin-left: 3em;
   }
@@ -102,6 +114,7 @@ button#favorites {
     column-count: 1;
     margin: auto;
   }
+
   .card {
     margin-left: 7em;
   }
@@ -112,6 +125,7 @@ button#favorites {
   .card-columns {
     column-count: 2;
   }
+
   .card {
     margin-left: 1.5em;
   }

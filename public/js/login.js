@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function () {
   // Toggle between login and signup views
   $(function () {

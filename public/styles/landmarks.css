@@ -3,26 +3,29 @@ html {
    height: 100%;
 }
 
-*, *:before, *:after {
-   box-sizing: inherit;
+body {
+   font: 100% / 1.414 "Roboto", arial, sans-serif;
+   position: relative;
+   min-height: 100%;
+   margin: 0;
+   background: #e0e8f3;
 }
 
-body {
-   position: relative;
-   margin: 0;
-   padding-bottom: 6rem;
-   min-height: 100%;
-}
 
 .header {
-   background-color: lightslategray;
    height: 100px;
    text-align: center;
    padding-top: 30px;
-   border-bottom: 3px solid rgb(59, 59, 59);
    color: black;
 }
 
+a.go-back {
+   font-size: 18px;
+   color: black;
+}
+
+
+/* 
 .landmark-contain {
    max-width: 960px;
    margin: 40px auto 0 auto;
@@ -80,4 +83,4 @@ body {
     text-decoration: none;
     color: black;
     text-align: center;
- }
+ } */
