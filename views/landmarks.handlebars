@@ -1,7 +1,6 @@
 <div id="container">
    <header class="site-header">
       <div class="logo" width="25px"><i class="fas fa-globe-americas"></i>Now&Then</div>
-
       <nav class="site-nav">
          <ul>
             {{!-- INSERT SEARCH BAR HERE --}}
@@ -9,16 +8,28 @@
             <li class="active"><a href="/favorites">Favorites</a></li>
          </ul>
       </nav>
-
       <div class="actions">
-         <div class="current-user">Welcome  <span class="member-name"></span></div>
+         <div class="current-user">Welcome <span class="member-name"></span></div>
          <a href="/logout" class="sign-out-link">Sign Out</a>
       </div>
    </header>
 
+   {{!-- Render favorite landmarks --}}
+   <div class="container result-imgs mb-5">
+      <div class="card-columns">
 
-  <div class="container-fluid landmark-contain">
-    <div class="saved"></div>
-  </div>
+         {{#each Favorite}}
+            <div class="card bg-light border-secondary" style="width: 18rem">
+               <img class="card-img-top" src="{{imgURL}}">
+               <div class="card-img-overlay">
+                  <button id="favorites"><i class="fas fa-star"></i></button>
+               </div>
+               <div class="card-body">
+                  <h6 class="card-title mb-0"> {{title}} </h6>
+               </div>
+            </div>
+         {{/each}}
+
+      </div>
+   </div>
 </div>
-
