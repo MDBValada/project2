@@ -96,10 +96,7 @@ body {
 }
 
 /* ================= */
-
-
-
-
+/* Card columns */
 .card-columns .card .card-body {
   display: inline-block;
   height: 100%;

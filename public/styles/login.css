@@ -214,11 +214,11 @@ li#signup-link {
 #no_input_msg2 {
   display: none;
   color: red;
-  font-size: .9rem;
+  font-size: 1rem;
 }
 
 #message {
   display: none;
   color: red;
-  font-size: .9rem;
+  font-size: 1rem;
 }
