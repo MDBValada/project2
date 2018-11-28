@@ -1,7 +1,21 @@
 <div id="container">
-   <div class="container-fluid header">
-      <h2>Search Landmarks</h2>
-   </div>
+   <header class="site-header">
+      <div class="logo" width="25px"><i class="fas fa-globe-americas"></i>Now&Then</div>
+
+      <nav class="site-nav">
+         <ul>
+            {{!-- INSERT SEARCH BAR HERE --}}
+            <li class="active"><a href="/search">Search</a></li>
+            <li><a href="/favorites">Favorites</a></li>
+         </ul>
+      </nav>
+
+      <div class="actions">
+         <div class="current-user">Welcome  <span class="member-name"></span></div>
+         <a href="/logout" class="sign-out-link">Sign Out</a>
+      </div>
+   </header>
+
 
    {{!-- Search Input --}}
    <div class="container-fluid search">
@@ -9,10 +23,8 @@
          <div class="form-group">
             <label for="searchBar">Which location's past would you like to examine?</label>
             <input type="text" class="form-control" id="searchBar" placeholder="Enter a city, state, or specific location here">
-            {{!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            --}}
          </div>
-         <button type="submit" id="submitInput" class="btn btn-primary">Submit</button>
+         <button type="submit" id="submitInput" class="btn">Submit</button>
       </form>
    </div>
 
@@ -20,7 +32,7 @@
    <div class="container result-imgs mb-5">
       <div class="card-columns">
 
-      {{#each locationObjects}}
+         {{#each locationObjects}}
          <div class="card bg-light border-secondary" style="width: 18rem">
             <img class="card-img-top" src="{{this.image}}">
             <div class="card-img-overlay">
@@ -30,9 +42,10 @@
                <h6 class="card-title mb-0"> {{this.name}} </h6>
             </div>
          </div>
-      {{/each}}
+         {{/each}}
       </div>
-
    </div>
+
    <div class="space"></div>
+
 </div>

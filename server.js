@@ -3,6 +3,9 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var session = require("express-session");
 
+// Requiring passport as we've configured it
+var passport = require("./config/passport");
+
 var exphbs = require("express-handlebars");
 
 var db = require("./models");
@@ -14,6 +17,17 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
+
+// We need to use sessions to keep track of our user's login status
+app.use(session({ 
+  secret: "keyboard cat", 
+  resave: true, 
+  saveUninitialized: true,
+  cookie: { maxAge: 100 * 60 * 60 * 24 * 30} // = 30 days
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Handlebars
 app.engine(
