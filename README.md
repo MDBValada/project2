@@ -1,9 +1,5 @@
 <p align="center">
-<<<<<<< HEAD
     :earth_americas:
-=======
-    ![Now&Then](img/glove.svg)
->>>>>>> ed4f87627a5ab49d4f3a745ed256c49fc59a57b4
 </p>
 <h1 align="center"><strong>Now&Then</strong></h1>
 
