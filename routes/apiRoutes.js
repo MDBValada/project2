@@ -80,21 +80,44 @@ module.exports = function (app) {
     });
   });
 
-  // Route for sending user favorites from the search.handlebars to landmarks.handlebars page.
-  // app.get("/search", function (req, res) {
-  //   db.Favorite.scope('defaultScope').findAll();
+  app.post("/favorites", function (req, res) {
+    console.log(req.body)
+    // Create a post with the favorited image and title using req.body, then return the result using res.json.
+    db.Favorite.create({
+      imgURL: req.body.imgURL,
+      title: req.body.title,
+      UserId: req.user.id
+    }).then(function (dbFavorite) {
+      res.json(dbFavorite)
+    })
+  });
 
+  // GET route for grabbing all of the favorited landmarks for the associated user,
+  // else, render a blank favorites.handlebar view.
+  app.get("/favorites/", function (req, res) {
+    console.log(req.user);
+    var query = {};
+    if (req.user) {
+      query.UserId = req.user.id;
 
-  //   if (req.favs.user_id) {
-  //     favs.UserId = req.favs.user_id;
-  //   }
-  //   db.Favorite.findAll({
-  //     where: favs
-  //   }).then(function(dbFavorites) {
-  //     res.json(dbFavorites)
-  //   })
-  // });
-
+      db.Favorite.findAll({
+          where: query
+        })
+        .then(function (dbFavorites) {
+          res.render("landmarks", {
+            title: 'Saved Landmarks',
+            style: 'landmarks.css',
+            Favorite: dbFavorites
+          });
+        });
+    } else {
+      res.render("landmarks", {
+        title: 'Saved Landmarks',
+        style: 'landmarks.css',
+        Favorite: []
+      });
+    }
+  });
 
   // Route for logging user out. Redirects back to login/signup view.
   app.get("/logout", function (req, res) {

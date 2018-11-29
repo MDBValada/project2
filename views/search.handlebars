@@ -1,7 +1,6 @@
 <div id="container">
    <header class="site-header">
       <div class="logo" width="25px"><i class="fas fa-globe-americas"></i>Now&Then</div>
-
       <nav class="site-nav">
          <ul>
             {{!-- INSERT SEARCH BAR HERE --}}
@@ -9,20 +8,20 @@
             <li><a href="/favorites">Favorites</a></li>
          </ul>
       </nav>
-
       <div class="actions">
          <div class="current-user">Welcome  <span class="member-name"></span></div>
          <a href="/logout" class="sign-out-link">Sign Out</a>
       </div>
    </header>
 
-
    {{!-- Search Input --}}
    <div class="container-fluid search">
       <form>
          <div class="form-group">
-            <label for="searchBar">Which location's past would you like to examine?</label>
-            <input type="text" class="form-control" id="searchBar" placeholder="Enter a city, state, or specific location here">
+            <div class="searchTitle">Time Portal</div>
+            <div class="searchText">Enter the subject of your search here!</div>
+            <label for="searchBar"></label>
+            <input type="text" class="form-control text-center" id="searchBar" placeholder="Enter a city, state, street... or even person!">
          </div>
          <button type="submit" id="submitInput" class="btn">Submit</button>
       </form>
@@ -33,19 +32,19 @@
       <div class="card-columns">
 
          {{#each locationObjects}}
-         <div class="card bg-light border-secondary" style="width: 18rem">
-            <img class="card-img-top" src="{{this.image}}">
-            <div class="card-img-overlay">
-               <button id="favorites"><i class="fas fa-star"></i></button>
+            <div class="card bg-light border-secondary" style="width: 18rem">
+               <img class="card-img-top" src="{{this.image}}">
+               <div class="card-img-overlay">
+                  <button id="favorites"><i class="fas fa-star"></i></button>
+               </div>
+               <div class="card-body">
+                  <h6 class="card-title mb-0"> {{this.name}} </h6>
+               </div>
             </div>
-            <div class="card-body">
-               <h6 class="card-title mb-0"> {{this.name}} </h6>
-            </div>
-         </div>
          {{/each}}
+
       </div>
    </div>
 
    <div class="space"></div>
-
 </div>

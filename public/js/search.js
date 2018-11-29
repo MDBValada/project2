@@ -19,6 +19,20 @@ $(document).ready(function () {
    // Favorites button toggle active state
    $(".fa-star").click(function () {
       $(this).toggleClass("active");
+
+      var favCard = this.parentElement.parentElement.parentElement;
+      var imgURL = favCard.querySelector("img").src;
+      var title = favCard.querySelector(".card-body>.card-title").innerHTML;
+
+      console.log(favCard);
+      console.log(imgURL, title);
+
+      $.post("/favorites", { 
+         imgURL: imgURL, 
+         title: title,
+      }).then(function (data) {
+         console.log(data)
+      })
    });
 
    // When a user clicks, toggle the 'is-animating' class 
@@ -30,31 +44,4 @@ $(document).ready(function () {
    $(".fa-star").on('animationend', function () {
       $(this).toggleClass('is_animating');
    });
-
-
-
-   // $(document.body).on("click", ".fa-star", function () {
-   //    var favStatus = $(this).attr("favorite-status");
-   //    var parentCard = $(this).attr("data-parent");
-   //    var parentCardID = "#" + parentCard;
-   //    console.log(parentCardID);
-
-   //    // Add to Favorites section
-   //    if (favStatus === "No") {
-   //       $(this).addClass("far").removeClass("fas");
-   //       $(this).attr({'favorite-status': 'Yes'});
-   //       var newFavCard = $("<div>", {id: "fav" + parentCard, class: "favorites"});
-   //       $(newFavCard).append($(parentCardID).html());
-   //       $(".saved").append(newFavCard);
-   //    } else {
-   //       // Remove from Favorites
-   //       $("[data-parent="+parentCard+"]").attr({'favorite-status': 'No'}).addClass("fas").removeClass("far");
-   //       var removeFav = $("#fav" + parentCard);
-   //       $(removeFav).remove();
-   //    }
-   // });
-
-
-
-
 });
