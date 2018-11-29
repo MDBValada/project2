@@ -1,4 +1,6 @@
-<p align="center"><img width=12.5% src="https://fontawesome.com/icons/globe-americas?style=solid"></p>
+<p align="center">
+    :earth_americas:
+</p>
 <h1 align="center"><strong>Now&Then</strong></h1>
 
 
@@ -18,8 +20,7 @@ Now&Then is a full-stack mobile responsive browser application that allows a use
 
 ### Application Video Demo
 
-
-![Now&Then](/video/appDemo.mov)
+![Demo](public/img/out.gif)
 
 
 ### How it Works
