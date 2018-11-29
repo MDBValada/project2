@@ -1,6 +1,6 @@
-<div align="center">
-    ![Now&Then](/public/img/glove.svg)
-</div>
+<p align="center">
+    ![Now&Then](img/glove.svg)
+</p>
 <h1 align="center"><strong>Now&Then</strong></h1>
 
 
