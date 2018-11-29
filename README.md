@@ -1,8 +1,5 @@
-# Now&Then
+<p align="center"><img width=12.5% src="https://github.com/anfederico/Clairvoyant/blob/master/media/Logo.png">Now&Then</p>
 
-## Project 2 for UCLA Extension Full-Stack Coding Bootcamp
-
-<p align="center"><img width=12.5% src="https://github.com/anfederico/Clairvoyant/blob/master/media/Logo.png"></p>
 
 ### Overview
 
