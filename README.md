@@ -1,4 +1,4 @@
-![Now&Then](public/img/globe.svg)
+![Now&Then](public/img/globe.svg | width=250x250)
 
 <h1 align="center"><strong>Now&Then</strong></h1>
 
