@@ -1,4 +1,4 @@
-<p align="center"><img width=12.5% src="https://github.com/anfederico/Clairvoyant/blob/master/media/Logo.png">Now&Then</p>
+<p align="center"><i class="fas fa-globe-americas"></i><span>Now&Then</span></p>
 
 
 ### Overview
