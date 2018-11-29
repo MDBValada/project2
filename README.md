@@ -1,4 +1,4 @@
-<h1 align="center"><strong>:globe_with_meridians:Now&Then</strong></h1>
+<h1 align="center"><strong>:earth_americas:Now&Then</strong></h1>
 
 
 ## Overview
