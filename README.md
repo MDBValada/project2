@@ -1,7 +1,8 @@
+<p align="center"><img width=12.5% src="https://fontawesome.com/icons/globe-americas?style=solid"></p>
 <h1 align="center"><strong>Now&Then</strong></h1>
 
 
-### Overview
+## Overview
 
 Do you like history but really only like looking at the images? We have an app for that! 
 Have you ever wondered what your town or the street you live on looked like before global modernization? We have an app for that!
@@ -12,7 +13,7 @@ Now&Then is a full-stack mobile responsive browser application that allows a use
 
 ## Demo the App
 
-*Now&Thenr* is deployed on Heroku. Demo the application [here](https://afternoon-island-95773.herokuapp.com/).
+*Now&Then* is deployed on Heroku. Demo the application [here](https://afternoon-island-95773.herokuapp.com/).
 
 
 ### Application Video Demo
