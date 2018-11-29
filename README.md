@@ -1,4 +1,4 @@
-<p align="center">
+<p align="center" width="12.5%">
     :earth_americas:
 </p>
 <h1 align="center"><strong>Now&Then</strong></h1>
