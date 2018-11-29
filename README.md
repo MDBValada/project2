@@ -1,4 +1,5 @@
-<p align="center"><i class="fas fa-globe-americas"></i><span>Now&Then</span></p>
+<p align="center"><img width=12.5% src="https://github.com/savannahcarr/project2/public/img/globe.svg"></p>
+<p align="center" width=60%>Now&Then</p>
 
 
 ### Overview
