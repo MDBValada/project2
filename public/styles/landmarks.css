@@ -80,7 +80,7 @@ body {
 /* ================= */
 /* Card columns */
 .result-imgs {
-  margin-top: 200px;
+  margin-top: 70px;
 }
 
 .card-columns .card .card-body {
@@ -133,7 +133,7 @@ body {
 }
 
 .fa-star.active {
-  color: #dc3232;
+  color: #62DEBE;
 }
 
 .fa-star:hover {
