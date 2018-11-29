@@ -1,6 +1,4 @@
-![Now&Then](public/img/globe.svg | width=250x250)
-
-<h1 align="center"><strong>Now&Then</strong></h1>
+<h1 align="center"><strong>:globe_with_meridians:Now&Then</strong></h1>
 
 
 ## Overview
