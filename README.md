@@ -1,6 +1,5 @@
-<p align="center" width="12.5%">
-    ![Now&Then](public/img/glove.svg)
-</p>
+![Now&Then](public/img/globe.svg)
+
 <h1 align="center"><strong>Now&Then</strong></h1>
 
 
