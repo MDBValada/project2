@@ -1,5 +1,4 @@
-<p align="center"><img width=12.5% src="https://github.com/savannahcarr/project2/public/img/globe.svg"></p>
-<p align="center" width=60%>Now&Then</p>
+<h1 align="center"><strong>Now&Then</strong></h1>
 
 
 ### Overview
@@ -19,7 +18,7 @@ Now&Then is a full-stack mobile responsive browser application that allows a use
 ### Application Video Demo
 
 
-![Now&Then](/public/video/appDemo.mov)
+![Now&Then](/video/appDemo.mov)
 
 
 ### How it Works
