@@ -1,4 +1,6 @@
-<p align="center"><img width=12.5% src="https://fontawesome.com/icons/globe-americas?style=solid"></p>
+<div align="center">
+    ![Now&Then](/public/img/glove.svg)
+</div>
 <h1 align="center"><strong>Now&Then</strong></h1>
 
 
