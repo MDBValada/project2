@@ -1,5 +1,5 @@
 <p align="center" width="12.5%">
-    :earth_americas:
+    ![Now&Then](public/img/glove.svg)
 </p>
 <h1 align="center"><strong>Now&Then</strong></h1>
 
